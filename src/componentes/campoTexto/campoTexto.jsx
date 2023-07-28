@@ -1,10 +1,22 @@
+import { useState } from 'react'
 import './campoTexto.css'
 
-export const CampoTexto = (props) => {
+const CampoTexto = (props) => {
+    const textOnChange = (evento) => {
+        props.textOnChange(evento.target.value)
+    }
+
     return (
         <div className="campo-texto">
             <label>{props.label}</label>
-            <input placeholder={props.placeholder} />
+            <input 
+                onChange={textOnChange} 
+                required={props.obrigatorio} 
+                value={props.valor}
+                placeholder={props.placeholder} 
+            />
         </div>
     )
 }
+
+export default CampoTexto

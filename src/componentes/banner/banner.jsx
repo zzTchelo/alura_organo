@@ -1,9 +1,11 @@
 import './banner.css'
 
-export const Banner = () => {
+const Banner = () => {
     return (
         <header className='banner'>
             <img src="/imagens/banner.png" alt="Banner_Principal"/>
         </header>
     )
 }
+
+export default Banner
